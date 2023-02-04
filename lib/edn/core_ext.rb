@@ -101,7 +101,7 @@ end
 
 Numeric.send(:include, EDN::CoreExt::Unquoted)
 Integer.send(:include, EDN::CoreExt::Integer)
-Bignum.send(:include, EDN::CoreExt::Bignum)
+Bignum.send(:include, EDN::CoreExt::Bignum) if defined?(Bignum)
 BigDecimal.send(:include, EDN::CoreExt::BigDecimal)
 TrueClass.send(:include, EDN::CoreExt::Unquoted)
 FalseClass.send(:include, EDN::CoreExt::Unquoted)
